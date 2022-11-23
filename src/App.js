@@ -5,7 +5,7 @@ import Home from './Pages/Home'
 import Base from './Pages/Base'
 import Order from './Pages/Order'
 import Toppings from './Pages/Toppings'
-import 'App.css'
+import './App.css'
 
 function App() {
   const [pizza, setPizza] = useState({ base:"", toppings: [] })

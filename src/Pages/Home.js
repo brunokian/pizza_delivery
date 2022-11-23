@@ -1,8 +1,13 @@
+import { Link } from "react-router-dom";
+
 const Home = () => {
   return(
-    <>
-      <h1>Home</h1>
-    </>
+    <div className="home container">
+      <h1>Welcome to Delivery Pizza!</h1>
+      <Link to="/base">
+        <button>Create your pizza</button>
+      </Link>
+    </div>
   )
 }
 

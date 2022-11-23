@@ -4,14 +4,15 @@ const Base = ({ addBase, pizza }) => {
   const bases = ['Classic', 'Thin & Crispy', 'Thick Crust'];
   
   return(
-    <>
+    <div className='base container'>
       <h1>Choose your base</h1>
       <ul>
         {
           bases.map((base) => {
+            let spanClass = pizza.base === base ? 'active' : '';
             return(
               <li key={base} onClick={() => addBase(base)}>
-                <span>{ base }</span>
+                <span className={spanClass}>{ base }</span>
               </li>
             )
           })
@@ -27,7 +28,7 @@ const Base = ({ addBase, pizza }) => {
           </div>
         )
       }
-    </>
+    </div>
   )
 }
 
