@@ -3,17 +3,18 @@
   margin: 0;
   padding: 0;
   list-style-type: none;
+  color: white;
 }
 
 body {
-  background: rgb(244, 244, 38);
+  background: #18191A;
   overflow: hidden;
 }
 
 .header {
-  background-color: rgb(244, 244, 38);
+  background-color: #18191A;
   display: flex;
-  border: 20px solid rgb(241, 39, 39);
+  border: 5px solid #FFFFFF;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -21,18 +22,18 @@ body {
 }
 
 .tittle {
-  color: rgb(189, 60, 60);
-  margin-left: 30px;
-  margin-top: 30px
+  color: #FFFFFF;
+  margin-left: 5px;
+  margin-top: 55px
 }
 
 button{
-  color: red;
+  color: #FFFFFF;
   padding: 10px 30px;
   font-size: 1em;
   background: transparent;
   border-radius: 50px;
-  border: 1px solid red;
+  border: 1px solid #FFFFFF;
   margin: 40px auto 0;
   cursor: pointer;
   opacity: 0.7;
@@ -42,6 +43,12 @@ button{
   max-width: 300px;
   margin: 100px auto 40px;
 }
+
+.container h1{
+  font-size: 50px;
+  margin: 30px;
+}
+
 .container h3{
   padding-bottom: 40px;
   margin-bottom: 10px;
@@ -55,6 +62,7 @@ button{
 
 .pizza-logo {
   width: 100px;
+  margin: 4px;
 }
 
 li span.active{
@@ -80,10 +88,10 @@ li span.active::before{
   max-width: 800px;
 }
 .home button{
-  color: red;
+  color: white;
   padding: 15px 30px;
   font-size: 1.6em;
-  border: 3px solid red;
+  border: 3px solid white;
   margin: 30px 20px;
 }
 .order p{
