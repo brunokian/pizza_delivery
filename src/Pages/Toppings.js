@@ -1,3 +1,4 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
@@ -5,7 +6,11 @@ const Toppings = ({ addToppings, pizza }) => {
   const toppings = ['mushrooms', 'peppers', 'onions', 'olives', 'extra cheese', 'tomatoes'];
 
   return(
-    <div className='toppings container'>
+    <motion.div className='toppings container'
+      initial={{ x: '100vw' }}
+      animate={{ x: 0 }}
+      transition={{ type: 'spring', delay: 0.5 }}
+    >
       <h1>choose toppings</h1>
       <ul>
         {
@@ -31,7 +36,7 @@ const Toppings = ({ addToppings, pizza }) => {
           }}
         >Order</motion.button>
       </Link>
-    </div>
+    </motion.div>
   )
 }
 

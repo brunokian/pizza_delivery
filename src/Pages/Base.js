@@ -1,3 +1,4 @@
+import React from 'react'
 import { Link } from 'react-router-dom'
 import { motion } from 'framer-motion'
 
@@ -6,8 +7,8 @@ const Base = ({ addBase, pizza }) => {
   
   return(
     <motion.div className='base container'
-      initial={{ x: '100vw' }}
-      animate={{ x: 0 }}
+      initial={{ opacity: 0, x: '100vw' }}
+      animate={{ opacity: 1, x: 0 }}
       transition={{ type: 'spring', delay: 0.5 }}
     >
       <h1>Choose your base</h1>

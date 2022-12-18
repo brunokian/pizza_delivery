@@ -6,6 +6,7 @@ import Base from './Pages/Base'
 import Order from './Pages/Order'
 import Toppings from './Pages/Toppings'
 import './App.css'
+import { AnimatePresence } from 'framer-motion';
 
 function App() {
   const [pizza, setPizza] = useState({ base:"", toppings: [] })
@@ -27,20 +28,22 @@ function App() {
   return (
     <>
       <Header />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-        <Route path="/base">
-          <Base addBase={ addBase } pizza={ pizza }/>
-        </Route>
-        <Route path="/Order">
-          <Order pizza={ pizza }/>
-        </Route>
-        <Route path="/toppings">
-          <Toppings addToppings={ addToppings } pizza={ pizza }/>
-        </Route>
-      </Switch>
+      <AnimatePresence>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/base">
+            <Base addBase={ addBase } pizza={ pizza }/>
+          </Route>
+          <Route path="/Order">
+            <Order pizza={ pizza }/>
+          </Route>
+          <Route path="/toppings">
+            <Toppings addToppings={ addToppings } pizza={ pizza }/>
+          </Route>
+        </Switch>
+      </AnimatePresence>
     </>
   );
 }

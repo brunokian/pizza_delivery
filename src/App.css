@@ -7,12 +7,12 @@
 }
 
 body {
-  background: #18191A;
+  background: #212121;
   overflow: hidden;
 }
 
 .header {
-  background-color: #18191A;
+  background-color: #212121;
   display: flex;
   border: 5px solid #FFFFFF;
   border-top: none;
