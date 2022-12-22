@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import { Link } from "react-router-dom";
 import { motion } from 'framer-motion'
 
@@ -18,12 +18,31 @@ const buttonVariants = {
   }
 }
 
-const Home = () => {
+const containerVariants = {
+  hidden: {
+    opacity: 0
+  },
+  visible: {
+    opacity: 1,
+    transition: { delay: 1, duration: 1.5 }
+  },
+  exit: {
+    x: '-100vw',
+    transition: {ease: 'easeInOut'}
+  }
+}
+
+const Home = ({ setShowModal }) => {
+  useEffect (() => {
+    setShowModal(false)
+  });
+
   return(
     <motion.div className="home container"
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1 }}
-      transition={{ delay: 1, duration: 1.5 }}
+      variants={containerVariants}
+      initial='hidden'
+      animate='visible'
+      exit='exit'
     >
       <h1>Welcome to Delivery Pizza!</h1>
       <Link to="/base">

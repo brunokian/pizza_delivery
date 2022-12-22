@@ -10,6 +10,7 @@ const Toppings = ({ addToppings, pizza }) => {
       initial={{ x: '100vw' }}
       animate={{ x: 0 }}
       transition={{ type: 'spring', delay: 0.5 }}
+      exit={{ x: '-100vw', transition: {ease: 'easeInOut'}}}
     >
       <h1>choose toppings</h1>
       <ul>

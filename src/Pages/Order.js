@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 import { motion, AnimatePresence } from 'framer-motion'
 
 const containerVariants = {
@@ -11,6 +11,10 @@ const containerVariants = {
     x: 0,
     transition: { type: 'spring', mass: 0.4, damping: 8, when: "beforeChildren", staggerChildren: 0.5 }
   },
+  exit: {
+    x: '-100vw',
+    transition: {ease: 'easeInOut'}
+  }
 }
 
 const childrenVariants = {
@@ -22,17 +26,20 @@ const childrenVariants = {
   }
 }
 
-const Order = ({ pizza }) => {
-  const [showThanks, setShowThanks] = useState(true);
-  setTimeout(() => {
-    setShowThanks(false)
-  }, 4000)
+const Order = ({ pizza, setShowModal }) => {
+
+  useEffect(() => {
+    setTimeout(() => {
+      setShowModal(true)
+    }, 2000)
+  }, [setShowModal])
 
   return(
     <motion.div className="order container"
       variants={containerVariants}
       initial='hidden'
       animate='visible'
+      exit='exit'
     >
 
       <h2 exit={{ y:-1000 }}>Thanks!!</h2>
