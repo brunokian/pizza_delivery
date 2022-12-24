@@ -33,9 +33,9 @@ const containerVariants = {
 }
 
 const Home = ({ setShowModal }) => {
-  useEffect (() => {
-    setShowModal(false)
-  });
+  // useEffect (() => {
+  //   setShowModal(false)
+  // });
 
   return(
     <motion.div className="home container"

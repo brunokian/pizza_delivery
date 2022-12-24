@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom"
 import { motion, AnimatePresence } from "framer-motion";
 
 const Modal = ({ showModal, setShowModal }) => {
@@ -6,6 +7,13 @@ const Modal = ({ showModal, setShowModal }) => {
     const backdropVariants = {
         hidden: { opacity: 0 },
         visible: { opacity: 1 }
+    }
+
+    const modalVariants = {
+        hidden: { y:'-100vw', opacity: 0 },
+        visible: { y: 200, opacity: 1,
+            transition: { delay: 0.5 } 
+        }
     }
 
     return (
@@ -17,7 +25,17 @@ const Modal = ({ showModal, setShowModal }) => {
                         initial='hidden'
                         animate='visible'
                     >
-                        <h2>deu certo</h2>
+                        <motion.div className="modal"
+                            variants={modalVariants}
+                            initial='hidden'
+                            animate='visible'
+                        >
+                            <p>Another one??</p>
+                            <Link to="/">
+                                <button>OK</button>
+                            </Link>
+                        </motion.div>
+                        
                     </motion.div>
                 )
             }
