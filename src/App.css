@@ -1,0 +1,127 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+  color: white;
+}
+
+body {
+  background: #212121;
+  overflow: hidden;
+}
+
+.header {
+  background-color: #212121;
+  display: flex;
+  border: 5px solid #FFFFFF;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-radius: 0 0 100px 0;
+}
+
+.tittle {
+  color: #FFFFFF;
+  margin-left: 5px;
+  margin-top: 55px
+}
+
+button{
+  color: #FFFFFF;
+  padding: 10px 30px;
+  font-size: 1em;
+  background: transparent;
+  border-radius: 50px;
+  border: 1px solid #FFFFFF;
+  margin: 40px auto 0;
+  cursor: pointer;
+  opacity: 0.7;
+}
+
+.container{
+  max-width: 300px;
+  margin: 100px auto 40px;
+}
+
+.container h1{
+  font-size: 50px;
+  margin: 30px;
+}
+
+.container h3{
+  padding-bottom: 40px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgba(255,255,255,0.2);
+}
+
+.container li{
+  padding: 10px;
+  cursor: pointer;
+}
+
+.pizza-logo {
+  width: 100px;
+  margin: 4px;
+}
+
+li span.active{
+  font-weight: bold;
+}
+
+li span.active::before{
+  content: '>';
+  position: relative;
+  top: -2px;
+  margin-right: 6px;
+  transform: scale(0.8, 1);
+  display: inline-block;
+}
+
+.order p{
+  margin: 20px auto;
+}
+
+.home.container, 
+.order.container{
+  text-align: center;
+  max-width: 800px;
+}
+.home button{
+  color: white;
+  padding: 15px 30px;
+  font-size: 1.6em;
+  border: 3px solid white;
+  margin: 30px 20px;
+}
+.order p{
+  margin: 20px auto;
+}
+
+.backdrop{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.5);
+  z-index: 1;
+}
+.modal{
+  max-width: 400px;
+  margin: 0 auto;
+  padding: 40px 20px;
+  background: white;
+  border-radius: 10px;
+  text-align: center;
+}
+.modal button{
+  color: #444;
+  border-color: #444;
+  font-weight: bold;
+  margin-top: 20px;
+}
+.modal p{
+  color: #444;
+  font-weight: bold;
+}
